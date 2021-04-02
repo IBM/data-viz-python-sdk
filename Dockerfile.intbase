@@ -1,0 +1,55 @@
+#===============================================================
+# IBM Confidential
+#
+# OCO Source Materials
+#
+# Copyright IBM Corp. 2018,2019
+#
+# The source code for this program is not published or otherwise
+# divested of its trade secrets, irrespective of what has been
+# deposited with the U.S. Copyright Office.
+#===============================================================
+
+
+# Pull base image.
+FROM ubuntu:18.04
+ARG S3FS_VERSION=v1.79
+ARG PROJECT_VERSION
+ENV VERSION=${PROJECT_VERSION}
+
+RUN apt-get update --fix-missing \
+  && apt-get upgrade -y \
+  && apt-get install -y software-properties-common \
+  && apt-get install -y build-essential \
+  && apt-get install -y wget make \
+  && apt-get install -y libsm6 libxrender1 libfontconfig1 libxext6 \
+  && apt-get install -y python3 python3-pip python3-dev \
+  && apt-get install -y gdal-bin \
+  && apt-get install -y libffi-dev libssl-dev libgdal-dev python3-gdal \
+  && apt-get install -y git  \
+  && apt-get install -y fuse libfuse-dev \
+  && apt-get install -y automake autoconf autotools-dev \
+  && apt-get install -y libxml2-dev \
+  && apt-get install -y autotools-dev \
+  && apt-get install -y ca-certificates
+
+RUN apt-get update
+RUN apt-get -y install curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
+RUN apt-get -y install nodejs
+RUN apt-get -y install nginx
+
+ENV INSTALL_DIRECTORY=/opt/src
+
+ENV OUTPUT_DIRECTORY=/opt/output/
+
+ENV TMP_DIRECTORY=/opt/tmp
+
+RUN  mkdir /opt/src  \
+    && mkdir -p $OUTPUT_DIRECTORY \
+    && mkdir -p $TMP_DIRECTORY
+
+ADD requirements.txt $INSTALL_DIRECTORY
+
+RUN cd $INSTALL_DIRECTORY \
+    && pip3 install -r requirements.txt

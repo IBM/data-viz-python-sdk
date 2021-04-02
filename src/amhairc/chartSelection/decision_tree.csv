@@ -1,0 +1,26 @@
+datacat,series,cat,sorted,manypoints,obspergrp,cattype,chart
+timeseries,1,,,,,,"lineplot,boxplot,lollipop"
+timeseries,gt1,,,,,,"lineplot,boxplot,lollipop"
+numeric,1,,,,,,"histogram,densityplot"
+numeric,2,,0,0,,,"histogram,boxplot,scatterplot"
+numeric,2,,0,1,,,"scatterplot,densityplot"
+numeric,2,,1,,,,"scatterplot,lineplot"
+numeric,3,,0,,,,"boxplot,bubbleplot"
+numeric,3,,1,,,,lineplot
+numeric,gt3,,1,,,,lineplot
+numeric,gt3,,0,,,,"boxplot,pca,dendrogram"
+categoric,1,,,,,,"barplot,lollipop"
+categoric,gt1,,,,,independent,venn
+categoric,gt1,,,,,nested,"barplot,dendrogram"
+categoric,gt1,,,,,subgroup,"groupedscatter,lollipop,sankey"
+categoric,gt1,,,,,adjacency,"network,arc, sankey"
+numcat,1,1,,,1,,"boxplot,lollipop"
+numcat,1,1,,,gt1,,"boxplot,histogram"
+numcat,gt1,1,0,,,,"groupedscatter,boxplot,pca"
+numcat,gt1,1,1,,,,"lineplot,connectedscatter"
+numcat,gt1,1,,,1,,"groupedscatter,lollipop,sankey"
+numcat,1,gt1,,,1,subgroup,"groupedscatter,lollipop,sankey"
+numcat,1,gt1,,,gt1,subgroup,boxplot
+numcat,1,gt1,,,1,nested,"barplot,dendrogram"
+numcat,1,gt1,,,gt1,nested,boxplot
+numcat,1,gt1,,,,adjacency,"network,arc, sankey"

@@ -1,0 +1,4 @@
+{"barplot":"",
+"histogram":"",
+"lineplot":"",
+"scatterplot":""}

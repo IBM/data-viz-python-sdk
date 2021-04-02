@@ -1,0 +1,12 @@
+prometheus-client==0.6.0
+livereload==2.6.0
+requests==2.21.0
+datetime==4.3
+numpy==1.18.1
+pandas==0.25.1
+scikit-learn==0.22
+bs4==0.0.1
+bokeh
+pyspellchecker
+money_parser
+flask

@@ -68,7 +68,7 @@ When running locally with a user interface you will run 2 docker containers.
 
 ## 2. Push code to your docker registry
 Push web to IBM Clloud docker registry
-1. ogin to IBM Cloud ibmcloud login –sso
+1. Login to IBM Cloud ibmcloud login –sso
 2. ibmcloud cr region-set us-south ( your own region )
 3. ibmcloud cr login
 4. docker tag amhairc-web:0.1.2 us.icr.io/amhairc/amhairc-web:0.1.2
@@ -79,3 +79,11 @@ Push web to IBM Clloud docker registry
 ![codeEngine.png](codeEngine.png)
 
 
+# Running the application once deployed.
+Once your containerised application has been deployed, you can access the chart application as follows:
+
+1. Access your URL endpoint (e.g. https://app-python-sdk.appdomain.cloud/)
+2. On the overview page select the next button
+3. On the attach page either drag and drop a csv file or click the upload button and nagigate to the csv file you wish to use for plotting. Once the file has been attached you should see the file listed on the screen. Click next.
+4. On the select columns page, select the columns you want to use for plotting. In this example, our csv has three column names: year, imports and exports. This type of data is most suited to a time series (line plot) give the time column. Simply select the year column and select data type as year. Next select the imports column and select float as a datatype. Finally, select exports and select float as a datatype. Finally click next.
+5. On the review page, you should see a table displaying the column names and the data types selected. Once you have confirmed the choices are correct, press the start charting button. 

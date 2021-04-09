@@ -1,0 +1,19 @@
+.App {
+  height: 100%;
+  align-items: center;
+  display: flex;
+
+  &-header {
+    margin-top: 3rem;
+  }
+
+  &-body {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+}

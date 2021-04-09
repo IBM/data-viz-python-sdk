@@ -1,0 +1,21 @@
+@import 'carbon-components/scss/globals/scss/styles.scss';
+
+@import '@console/pal/carbon-components/scss/components/data-table/_data-table';
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: var(--cds-body-short-01-font-size,.875rem);
+  font-weight: var(--cds-body-short-01-font-weight,400);
+  line-height: var(--cds-body-short-01-line-height,1.125rem);
+  letter-spacing: var(--cds-body-short-01-letter-spacing,.16px);
+  color: $text-01;
+  background-color: $ui-background;
+}
+
+
+@import './pages/app.scss';
+@import './pages/main.scss';
